@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ignasius Jonathan Putra Perdana</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Ignasius Jonathan Putra Perdana</h1>
-    <h2>1202223361</h2>
-    <p>Sistem Informasi</p>
+    <div class="container">
+        <img class="profile" src="Foto/Johan.JPG">
+        <h1>Ignasius Jonathan Putra Perdana</h1>
+        <h2 class="nim">1202223361</h2>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ignasius_jnthn/" target="_blank"><img src="Foto/ig.png" class="instagram"></a>
+            <a href="https://github.com/UsernamenyaApa" target="_blank"><img src="Foto/github.png" class="github"></a>
+        </div>
+        <div class="date-time">
+            <p><span id="datetime"></span></p>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function updateDateTime() {
+        var now = new Date();
+        var datetime = now.toLocaleString();
+        document.getElementById('datetime').textContent = datetime;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); 
+    </script>
+
+    
 </body>
 </html>
